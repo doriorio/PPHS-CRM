@@ -7,10 +7,15 @@ var logger = require('morgan');
 //load the env vars
 require('dotenv').config();
 
+var app = express();
+
+//require our routes
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+//connect to the MongoDB with mongoose
+require('./config/database');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
