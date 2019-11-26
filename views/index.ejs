@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+  <title><%= title %></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <p>Welcome to <%= title %></p>
+  <% if (user) { %>
+  <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+  <% } else { %>
+  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+  <% } %>
+</body>
+
 </html>
