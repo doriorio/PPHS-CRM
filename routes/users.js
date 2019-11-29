@@ -23,7 +23,10 @@ router.get('/logout', function(req, res) {
   res.redirect('/home');
 });
 
+router.get('/user/:id/new', usersCtrl.show);
+router.post('/user/:id', usersCtrl.create);
 
 router.get('/user', usersCtrl.index);
+
 
 module.exports = router;

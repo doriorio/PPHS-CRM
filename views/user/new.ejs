@@ -1,0 +1,25 @@
+<%- include('../partials/head') %>
+
+<br>
+<form action="/users/<%= id %>/profile" method="POST">
+	First Name: <input type="text" name="firstName" class="white-text"><br>
+	Last Name:<input type="text" name="lastName" class="white-text"><br>
+	Email:<input type="text" name="email" class="white-text"><br>
+	Authorized Persons:<input type="text" name="authorizedppl" class="white-text"><br>
+	Phone Number: <input type="number" name="phone" class="white-text"><br>
+	Street Address: <input type="number" name="streetAdd" class="white-text"><br>
+	Street Name: <input type="text" name="street" class="white-text"><br>
+	City: <input type="text" name="city" class="white-text"><br>
+	Zip: <input type="number" name="zip" class="white-text"><br>
+	Vet Name: <input type="text" name="vetName" class="white-text"><br>
+	Emergency Contact First Name: <input type="emergencyContactfn" name="zip" class="white-text"><br>
+	Emergency Contact Last Name:<input type="emergencyContactln" name="zip" class="white-text"><br>
+	
+	<button type="submit" class="btn btn-primary">Add Profile</button>
+  </form>
+
+
+
+
+</body>
+</html> 

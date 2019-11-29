@@ -1,0 +1,10 @@
+<%- include('../partials/head') %>
+
+<% if (user.hasOwnProperty("firstName") === false) { %>
+	<a href="/user/<%= user._id %>/new"><i class="material-icons">face</i>Create your profile</a>
+	<% } %>
+ 	</li>
+ </ul>
+
+</body>
+</html>
