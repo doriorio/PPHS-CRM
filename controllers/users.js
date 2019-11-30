@@ -1,26 +1,49 @@
 const User = require('../models/user');
 module.exports = {
-    index,
+    new: newUser,
+    create,
     show,
-    create
+    index
 };
-
-function show(req, res){
+//new user FORM
+function newUser(req, res){
+    console.log("hitting new");
     let id = req.params.id;
-    res.render('user/new', {id});
+
+    res.render(`user/new`, {id});
 }
-function index(req, res, next){
-    console.log(req.params.id);
-    res.render('user/index', {
-        user: req.user,
+
+//show the form?? 
+function show(req, res){
+    console.log('hitting show');
+    User.findById(req.params.id, function(err, user){
+        res.render('user/show', {user});
+    });
+    // User.findById(req.params.id), function(err, user) {
+    //     console.log(user);
+        // res.render(`/user/show`, {user});
+    // };
+    // let user = req.params.id;
+
+}
+
+
+//i think this create should be more like an update
+function create(req, res){
+    console.log("hitting create");
+    console.log(req.body);
+
+    User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, user) => 
+    {
+        if (err) return res.status(500).send(err);
+        res.redirect(`/user/${req.params.id}/show`)
+        console.log(user + "logging user at creation");
     });
 }
 
 
-function create(req, res){
-    console.log(req.body);
-    req.body.user = req.params.id;
-    User.create(req.body, function(err, user){
-        res.redirect(`/users/${req.body.user}`);
+function index(req, res, next){
+    res.render('user/index', {
+        user: req.user,
     });
 }

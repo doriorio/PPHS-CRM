@@ -3,8 +3,7 @@ var Schema = mongoose.Schema;
 
 
 var userSchema = new Schema({
-    firstName: String,
-    lastName: String,
+    name: String,
     authorizedppl: String,
     phone: Number,
     streetAdd: Number,
@@ -18,7 +17,10 @@ var userSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Pet'
     }],
-    googleId: String
+    email: String,
+    googleId: []
 })
 
 module.exports = mongoose.model('User', userSchema);
+
+
