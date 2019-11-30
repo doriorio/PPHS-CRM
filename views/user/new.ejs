@@ -2,7 +2,7 @@
 
 <br>
 <form action="/user/<%= id %>" method="POST">
-	Full Name: <input type="text" name="name" class="white-text"><br>
+	Full Name: <input type="text" name="name" class="white-text" placeholder="<%= user.name %>"><br>
 	Email:<input type="text" name="email" class="white-text"><br>
 	Authorized Persons:<input type="text" name="authorizedppl" class="white-text"><br>
 	Phone Number: <input type="number" name="phone" class="white-text"><br>
@@ -14,7 +14,7 @@
 	Emergency Contact First Name: <input type="text" name="emergencyContactfn" class="white-text"><br>
 	Emergency Contact Last Name:<input type="text" name="emergencyContactln" class="white-text"><br>
 	
-	<button type="submit" class="btn btn-primary">Add Profile</button>
+	<button type="submit" class="btn btn-primary">Update Profile</button>
   </form>
 
 

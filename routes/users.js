@@ -26,6 +26,8 @@ router.get('/logout', function(req, res) {
 router.get('/user/:id/new', usersCtrl.new);
 router.post('/user/:id', usersCtrl.create);
 router.get('/user/:id/show', usersCtrl.show);
+
+
 router.get('/user', usersCtrl.index);
 
 
