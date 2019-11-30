@@ -1,11 +1,17 @@
 <%- include('../partials/head') %>
 
 <h3>
-<%= user %>
+Hello <%= user.name %>! <br>
+Your profile information is as follows: <br>
 
+Your name is <%= user.name %><br>
+You have authorized <%= user.authorizedppl %> to pick up your pets.<br>
+You live at <%= user.streetAdd %> <%= user.street %> / <%= user.city %> <%= user.zip %><br>
+Your vet is <%= user.vetName %><br>
+Your emergency contact is <%= user.emergencyContactfn %> <%= user.emergencyContactln %>
 
 </h3>
-  </form>
+Does this look incorrect? If so update here
 
 
 </body>
