@@ -13,9 +13,9 @@ var userSchema = new Schema({
     vetName: String,
     emergencyContactfn: String,
     emergencyContactln: String,
-    pets: [{
+    dogs: [{
         type: Schema.Types.ObjectId,
-        ref: 'Pet'
+        ref: 'Dog'
     }],
     email: String,
     googleId: []

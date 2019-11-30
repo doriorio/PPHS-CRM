@@ -3,7 +3,6 @@ module.exports = {
     new: newUser,
     create,
     show,
-
     index
 };
 

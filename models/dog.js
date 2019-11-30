@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-var petSchema = new Schema({
-    petName: String,
+var dogSchema = new Schema({
+    dogName: String,
     breed: String,
     age: Number,
     vaccinationDates: Date,
@@ -12,4 +12,4 @@ var petSchema = new Schema({
     feedingFrequency: Number
 })
 
-module.exports = mongoose.model('Pet', petSchema);
+module.exports = mongoose.model('Dog', dogSchema);

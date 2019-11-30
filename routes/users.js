@@ -28,6 +28,7 @@ router.post('/user/:id', usersCtrl.create);
 router.get('/user/:id/show', usersCtrl.show);
 
 
+
 router.get('/user', usersCtrl.index);
 
 

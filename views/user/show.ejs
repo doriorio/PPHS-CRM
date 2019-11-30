@@ -12,7 +12,9 @@ Your emergency contact is <%= user.emergencyContactfn %> <%= user.emergencyConta
 
 </h3>
 Does this look incorrect? If so update <a href="/user/<%= user._id %>/new">here</a>
-
+<br>
+Looks like you haven't added your pets yet, click here to do so!
+<br><a href="/user/<%= user._id %>/dogs/new" class="btn btn-secondary btn-lg" role="button">Add A Dog</a>
 
 </body>
 </html> 
