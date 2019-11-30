@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //mount all routes with appropriate base paths
 app.use('/', indexRouter);
 app.use('/', usersRouter);
-app.use('/user/', dogsRouter);
+app.use('/', dogsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
