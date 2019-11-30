@@ -23,7 +23,7 @@ function create(req, res){
         user.dogs.push(req.body);
         user.save(function(err){
             console.log(user.dogs);
-            res.redirect(`user/${req.params.id}/show`);
-        })
-    })
+            res.redirect(`/user/${req.params.id}/show`);
+        });
+    });
 }

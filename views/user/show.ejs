@@ -8,13 +8,20 @@ Your name is <%= user.name %><br>
 You have authorized <%= user.authorizedppl %> to pick up your pets.<br>
 You live at <%= user.streetAdd %> <%= user.street %> / <%= user.city %> <%= user.zip %><br>
 Your vet is <%= user.vetName %><br>
-Your emergency contact is <%= user.emergencyContactfn %> <%= user.emergencyContactln %>
+Your emergency contact is <%= user.emergencyContactfn %> <%= user.emergencyContactln %> <br>
+
+Your dogs are <% user.dogs.forEach(function(d) { %>
+ <%= d.dogName %>
+<% }); %>
 
 </h3>
 Does this look incorrect? If so update <a href="/user/<%= user._id %>/new">here</a>
 <br>
+<% if (user.dogs !== []) { %>
 Looks like you haven't added your pets yet, click here to do so!
-<br><a href="/user/<%= user._id %>/dogs/new" class="btn btn-secondary btn-lg" role="button">Add A Dog</a>
+<br><a href="/user/<%= user._id %>/dogs/new" class="btn btn-secondary btn-lg" role="button">Add a Dog</a>
+<% } %>
+
 
 </body>
 </html> 
