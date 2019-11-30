@@ -2,6 +2,17 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
+
+var dogSchema = new Schema({
+    dogName: String,
+    breed: String,
+    age: Number,
+    vaccinationDates: Date,
+    notes: String,
+    foodBrand: String,
+    feedingFrequency: Number
+})
+
 var userSchema = new Schema({
     name: String,
     authorizedppl: String,
@@ -13,14 +24,10 @@ var userSchema = new Schema({
     vetName: String,
     emergencyContactfn: String,
     emergencyContactln: String,
-    dogs: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Dog'
-    }],
+    dogs: [dogSchema],
     email: String,
     googleId: []
 })
 
 module.exports = mongoose.model('User', userSchema);
-
 

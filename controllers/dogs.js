@@ -1,4 +1,4 @@
-const Dog = require('../models/dog');
+
 const User = require('../models/user');
 
 module.exports = {
@@ -18,10 +18,12 @@ function newDog(req, res){
 function create(req, res){
     console.log('hitting create dog route');
     User.findById(req.params.id, function(err, user){
+        console.log(req.params.id)
+        console.log(user);
         user.dogs.push(req.body);
         user.save(function(err){
             console.log(user.dogs);
-            res.redirect('/show');
+            res.redirect(`user/${req.params.id}/show`);
         })
     })
 }
