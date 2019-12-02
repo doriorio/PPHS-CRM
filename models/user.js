@@ -14,7 +14,11 @@ var dogSchema = new Schema({
 
 
 var reservationSchema = new Schema({
-    type: String,
+    type: {
+        type: String,
+        required: true,
+        enum: ['grooming', 'daycare', 'boarding']
+    },
     checkIn: Date,
     checkOut: Date,
     notes: String

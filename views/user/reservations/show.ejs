@@ -1,9 +1,8 @@
 <%- include('../../partials/head') %>
 
 
-this isnt doing anything but it should show a list of reservations
+<%= user.reservations %>
 
-<%= user %>
 
 <% user.reservations.forEach(function(r) { %>
     <div class="card border-primary m-3" style="width: 20rem;">
@@ -15,5 +14,8 @@ this isnt doing anything but it should show a list of reservations
       </div>
 
 <% }); %>
+
+<a href="../show">Back to my profile</a><br>
+
 
 <%- include('../../partials/footer') %>
