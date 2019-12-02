@@ -12,17 +12,13 @@ function newDog(req, res){
     res.render(`user/dogs/new`, {
         id
     });
-    console.log('at new dog route');
 }
 
 function create(req, res){
-    console.log('hitting create dog route');
     User.findById(req.params.id, function(err, user){
-        console.log(req.params.id)
-        console.log(user);
         user.dogs.push(req.body);
         user.save(function(err){
-            console.log(user.dogs);
+
             res.redirect(`/user/${req.params.id}/show`);
         });
     });

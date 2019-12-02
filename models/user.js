@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-
 var dogSchema = new Schema({
     dogName: String,
     breed: String,
@@ -12,6 +11,16 @@ var dogSchema = new Schema({
     foodBrand: String,
     feedingFrequency: Number
 })
+
+
+var reservationSchema = new Schema({
+    type: String,
+    dog: [dogSchema],
+    checkIn: Date,
+    checkOut: Date,
+    notes: String
+})
+
 
 var userSchema = new Schema({
     name: String,

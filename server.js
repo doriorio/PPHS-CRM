@@ -20,6 +20,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dogsRouter = require('./routes/dogs');
+var resoRouter = require('./routes/reservations');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/', dogsRouter);
+app.use('/', resoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
