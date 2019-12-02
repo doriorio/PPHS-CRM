@@ -15,7 +15,6 @@ var dogSchema = new Schema({
 
 var reservationSchema = new Schema({
     type: String,
-    dog: [dogSchema],
     checkIn: Date,
     checkOut: Date,
     notes: String
@@ -34,6 +33,7 @@ var userSchema = new Schema({
     emergencyContactfn: String,
     emergencyContactln: String,
     dogs: [dogSchema],
+    reservations: [reservationSchema],
     email: String,
     googleId: []
 })

@@ -1,6 +1,6 @@
 <%- include('../partials/head') %>
 
-<% if (user.hasOwnProperty("firstName") === false) { %>
+<% if (user.hasOwnProperty("name") === false) { %>
 	<a href="/user/<%= user._id %>/new"><i class="material-icons">face</i>Create your profile</a>
 	<% } %>
  	</li>
@@ -8,7 +8,7 @@
 <br>
  Quick Links:<br><strong>
  <a href="user/<%= user._id %>/show">See my profile & Pet Info</a><br>
- <a href="">Make a new reservation</a><br>
+ <a href="user/<%= user._id %>/reservations/new">Make a new reservation</a><br>
 </strong>
 
 </body>
