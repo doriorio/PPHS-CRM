@@ -1,8 +1,43 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+  box-sizing: border-box;
+  
 }
 
-a {
-  color: #00B7FF;
+
+:root {
+  --mainColor: #E79A9C;
+}
+
+body {
+  margin: 0;
+}
+
+
+.hoverlink {
+  background:
+     linear-gradient(
+       to left,
+       var(--mainColor) 0%,
+       var(--mainColor) 0%,
+       transparent 0px
+     );
+    background-repeat: repeat-x;
+    background-size: 100%;
+  color: #000;
+  padding-left: 10px;
+  text-decoration: none;
+}
+.hoverlink:hover {
+  background:
+  linear-gradient(
+    to right,
+    var(--mainColor) 0%,
+    var(--mainColor) 5px,
+    transparent
+  );
+  text-decoration: none;
+}
+
+.right {
+  margin: 0 auto;
 }

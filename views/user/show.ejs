@@ -1,36 +1,55 @@
 <%- include('../partials/head') %>
 
-<h3>
-<div class="d-flex flex-wrap">
-<div class="card text-white bg-primary m-3" style="width: 20rem;">
-    <div class="card-header"><h4>Name: <%= user.name %></h4></div>
-    <div class="card-body">
-      <h5 class="card-title">Vet name: <%= user.vetName %> </h5>
-      <p class="card-text"><h6>Address: <%= user.streetAdd %> <%= user.street %> / <%= user.city %> <%= user.zip %></h6></p>
-    </div>
-  </div>
 
-
-
-<% user.dogs.forEach(function(d) { %>
-    <div class="card border-primary m-3" style="width: 20rem;">
-        <div class="card-header"><i class="material-icons md-72" >pets</i> <%= d.dogName %></div>
-        <div class="card-body">
-          <h4 class="card-title"> <%= d.breed %></h4>
-          <p class="card-text"><%= d.notes %></p>
+<div class="d-flex">
+    <div class="card text-white bg-primary m-3">
+        <div class="card-header">
+            <h4>Name: <%= user.name %></h4>
         </div>
-      </div>
-
-<% }); %>
+        <div class="card-body">
+            <h5 class="card-title">Vet name: <%= user.vetName %> </h5>
+            <p class="card-text">
+                <h6>Address: <%= user.streetAdd %> <%= user.street %> / <%= user.city %> <%= user.zip %></h6>
+            </p>
+        </div>
+    </div>
 </div>
-</h3>
-Does this look incorrect? If so update <a href="/user/<%= user._id %>/new">here</a>
-<br>
+
+    <div class="d-flex">
+        <div class="card text-white bg-info m-3">
+            <div class="card-header">Vet info</div>
+            <div class="card-body">
+                <h4 class="card-title"><%= user.vetName %></h4>
+            </div>
+        </div>
+    </div>
 
 
-<br><a href="/user/<%= user._id %>/dogs/new" class="btn btn-secondary btn-lg" role="button">Add a Dog</a>
+    <% user.dogs.forEach(function(d) { %>
+    <div class="d-flex">
+        <div class="card border-primary m-3" style="width: 20rem;">
+            <div class="card-header">
+                <h5><i class="material-icons md-72">pets</i> <%= d.dogName %></h5>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> <%= d.breed %></h5>
+                <h6>
+                    <p class="card-text"><%= d.notes %></p>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+    <% }); %>
+
+
+    Does this look incorrect? If so update <a href="/user/<%= user._id %>/new"> here</a>
+    <br>
+
+
+    <br><a href="/user/<%= user._id %>/dogs/new" class="btn btn-secondary btn-lg" role="button">Add a Dog</a>
 
 
 
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>

@@ -14,4 +14,6 @@ router.get('/home', function(req, res, next){
     title: "WELCOME TO DOG APP"
   })
 })
+
+
 module.exports = router;
