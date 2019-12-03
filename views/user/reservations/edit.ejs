@@ -1,6 +1,31 @@
 <%- include('../../partials/head') %>
 
 this can be populated with all the stuff from the new reso form
+<%= reso %>
+<%= user %>
+
+
+<form action="/user/<%= user %>/reservations/<%= reso.id %>" method="POST">
+    Type:
+    <select name="type" value="<%= reso.type %>">
+        <option value="grooming">Grooming</option>
+        <option value="daycare">Daycare</option>
+        <option value="boarding">Boarding</option>
+    </select>
+    <br>
+
+    </select>
+    </p>
+    <br>
+    Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkIn %>"><br>
+    Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkOut %>"><br>
+
+    Notes?: <input type="text" name="notes" class="white-text" value="<%= reso.notes %>"><br>
+
+<br>
+    <button type="submit" class="btn btn-secondary">Update Reservation</button>
+</form>
+
 
 
 <%- include('../../partials/footer') %>

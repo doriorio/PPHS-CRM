@@ -49,22 +49,33 @@ function show(req, res){
     });
 }
 //change
-function edit(req, res){
+function edit(req, res) {
     console.log('hitting edit route');
-    let user = req.user
-    console.log(User.reservations)
-    User.findOne({reservations: req.params.id}, function(err, reso){
-        console.log(reso)
+    console.log(req.params.rid)
+    console.log(req.params.uid)
+
+    let reso = req.params.id;
+    let user = req.params.uid;
+    Reservation.findOne({
+        reso
+    }, function (err, reso) {
+        console.log(user);
         res.render(`user/reservations/edit`, {
-
-        })
-
-    });
+            reso,
+            user
+        });
+    })
 
 }
 
 function update(req, res){
-    User.reservations.findById(req.params.id, function(err, user){
-        console.log("???");
+    console.log('hitting update route for resos');
+
+    let reso = req.params.rid;
+    let user = req.params.uid;
+    let resoUpdate = req.body;
+    Reservation.findByIdAndUpdate(reso, resoUpdate, function(err, reso){
+        console.log(reso);
+        res.redirect(`/user/${user}/reservations/show`);
     });
 }
