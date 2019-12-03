@@ -3,28 +3,28 @@
 
 
 <form action="/user/<%= id %>/reservations" method="POST">
-    Type: 
+    Type:
     <select name="type">
-            <option value="grooming">Grooming</option>
-            <option value="daycare">Daycare</option>
-            <option value="boarding">Boarding</option>
-          </select>
-          <br>
-    Dog:    <select name="dog">
-              <% user.dogs.forEach(function(d) { %>
-                <option><%= d.dogName %></option>
-              <% }) %>
-            </select>
-          </p>
-          <br>
-	Check in date: <input type="date" name="checkIn" class="white-text"><br>
-	Check out date: <input type="date" name="checkOut" class="white-text"><br>
-	
-	Notes?: <input type="text" name="notes" class="white-text"><br>
+        <option value="grooming">Grooming</option>
+        <option value="daycare">Daycare</option>
+        <option value="boarding">Boarding</option>
+    </select>
+    <br>
+    Dog: <select name="dog">
+        <% user.dogs.forEach(function(d) { %>
+        <option><%= d.dogName %></option>
+        <% }) %>
+    </select>
+    </p>
+    <br>
+    Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01"><br>
+    Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01"><br>
 
-	
-	<button type="submit" class="btn btn-primary">Add reservation</button>
-  </form>
+    Notes?: <input type="text" name="notes" class="white-text"><br>
+
+
+    <button type="submit" class="btn btn-primary">Add reservation</button>
+</form>
 
 
 

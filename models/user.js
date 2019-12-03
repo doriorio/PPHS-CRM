@@ -21,7 +21,8 @@ var reservationSchema = new Schema({
     },
     checkIn: Date,
     checkOut: Date,
-    notes: String
+    notes: String,
+    dog: String
 })
 
 

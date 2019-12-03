@@ -5,7 +5,8 @@ const User = require('../models/user');
 module.exports = {
     new: newReservation,
     create,
-    show
+    show,
+    edit
 }
 
 
@@ -20,13 +21,13 @@ function newReservation(req, res){
 } 
 
 function create(req, res){
+    console.log("hitting create reso");
+    console.log(req.body);
     User.findById(req.params.id, function(err, user){
-        console.log(req.params.id);
-        console.log(req.body);
+
         user.reservations.push(req.body);
-        console.log(user + "before");
         user.save(function(err){
-            console.log(user + "after");
+
             res.redirect(`/user/${req.params.id}/reservations/show`);
         });
 });
@@ -39,5 +40,19 @@ function show(req, res){
             user,
             id: req.params.id
         });
+    });
+}
+
+function edit(req, res){
+    console.log('hitting edit route');
+
+    res.render(`user/reservations/edit`, {
+        // id: req.params.id,
+    });
+}
+
+function update(req, res){
+    User.reservations.findById(req.params.id, function(err, user){
+        console.log("???");
     });
 }

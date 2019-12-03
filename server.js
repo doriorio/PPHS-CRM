@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
-  secret: "I love cookies",
+  secret: 'I love cookies',
   resave: false,
   saveUninitialized: true
 }));

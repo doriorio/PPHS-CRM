@@ -10,8 +10,12 @@
 
 body {
   margin: 0;
+  text-decoration: none;
 }
 
+body :hover{
+  text-decoration: none;
+}
 
 .hoverlink {
   background:
@@ -23,7 +27,7 @@ body {
      );
     background-repeat: repeat-x;
     background-size: 100%;
-  color: #000;
+  color: #fff;
   padding-left: 10px;
   text-decoration: none;
 }
@@ -40,4 +44,5 @@ body {
 
 .right {
   margin: 0 auto;
+
 }

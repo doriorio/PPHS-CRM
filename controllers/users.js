@@ -39,7 +39,10 @@ function create(req, res){
 
 
 function index(req, res, next){
-    res.render('user/index', {
-        user: req.user,
-    });
+    User.findById(req.user.id, function(err, user){
+        res.render('user/index', {
+            user,
+        });
+
+});
 }
