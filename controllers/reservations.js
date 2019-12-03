@@ -23,7 +23,7 @@ function newReservation(req, res){
 } 
 
 
-//change
+//this works!
 function create(req, res){
     console.log('hitting create route for resos')
     let user = req.params.id;
@@ -33,7 +33,7 @@ function create(req, res){
     });
 
 }
-
+//this works!
 function show(req, res){
     let user = req.params.id;
     console.log('hitting show route for resos')
@@ -51,7 +51,7 @@ function show(req, res){
 //change
 function edit(req, res){
     console.log('hitting edit route');
-    
+    let user = req.user
     console.log(User.reservations)
     User.findOne({reservations: req.params.id}, function(err, reso){
         console.log(reso)

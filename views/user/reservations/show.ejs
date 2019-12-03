@@ -1,11 +1,10 @@
 <%- include('../../partials/head') %>
 
-<%= user %>
 <% resos.forEach(function(r) { %>
     <%= r.id %>
     <div class="card border-primary m-3" style="width: 20rem;">
         <div class="card-header" style="text-transform: capitalize;" ><i class="material-icons md-72" >pets</i> <%= r.type %> Reservation
-            <a href="/reservations/<%= r.id %>/edit/" class="badge badge-secondary" style="float: right;">
+            <a href="/user/<%= user.id %>/reservations/<%= r.id %>/edit" class="badge badge-secondary" style="float: right;">
                 Update
             </a></div>
         <div class="card-body">

@@ -8,6 +8,8 @@ router.get('/user/:id/reservations/new', resoCtrl.new);
 router.post('/user/:id/reservations', resoCtrl.create);
 router.get('/user/:id/reservations/show', resoCtrl.show);
 router.get('/user/:uid/reservations/:rid/edit', resoCtrl.edit);
+
+
 module.exports = router;
 
 
