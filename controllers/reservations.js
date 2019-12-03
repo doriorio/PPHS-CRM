@@ -78,4 +78,11 @@ function update(req, res){
 
 function deleteOne(req, res){
     console.log('hitting delete');
+    let reso = req.params.rid;
+    let user = req.params.uid;
+    console.log(reso, user);
+    Reservation.deleteOne({"_id": reso}, function(err, reso){
+        res.redirect(`/user/${user}/reservations/show`);
+    })
+
 }
