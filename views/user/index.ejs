@@ -1,18 +1,18 @@
 <%- include('../partials/head') %>
-
-First time?
-	<a href="/user/<%= user._id %>/new"><i class="material-icons">face</i>Create your profile</a>
-
- 	</li>
- </ul>
+<div class="list-group">
 <br>
- Quick Links:<br><strong>
- <a href="user/<%= user._id %>/show">See my profile & Pet Info</a><br>
- <a href="user/<%= user._id %>/reservations/show">See my reservations</a><br>
- <a href="user/<%= user._id %>/reservations/new">Make a new reservation</a><br>
-</strong>
-
+<ul>
+	<h5>Quick Links:</h5><br><strong>
+		<a href="/user/<%= user._id %>/new" class="list-group-item list-group-item-action list-group-item-primary" height="100px"><i class="material-icons">face</i>Update profile</a>
+		<a href="user/<%= user._id %>/show" class="list-group-item list-group-item-action list-group-item-primary">See profile & pets</a>
+		<a href="user/<%= user._id %>/reservations/show" class="list-group-item list-group-item-action list-group-item-primary">See reservations</a>
+		<a href="user/<%= user._id %>/reservations/new" class="list-group-item list-group-item-action list-group-item-primary">Make a reservation</a>
+		<a href="/user/<%= user._id %>/dogs/new" class="list-group-item list-group-item-action list-group-item-primary">Add a dog</a>
+	</strong>
+</ul>
+</div>
 </body>
+
 </html>
 
 <%- include('../partials/footer') %>

@@ -10,10 +10,11 @@
 	Street Address: <input type="number" name="streetAdd" class="white-text" value="<%= user.streetAdd%>" required>
 	Street Name: <input type="text" name="street" class="white-text" value="<%= user.street%>" required><br>
 	City: <input type="text" name="city" class="white-text" value="<%= user.city%>" required><br>
-	Zip: <input type="number" name="zip" class="white-text" value="<%= user.zip%>" required>
+	Zip: <input type="number" name="zip" class="white-text" value="<%= user.zip%>" required><br>
 	Vet Name: <input type="text" name="vetName" class="white-text" value="<%= user.vetName %>" required><br>
-	Emergency Contact First Name: <input type="text" name="emergencyContactfn" class="white-text" value="<%= user.emergencyContactfn %>" required>
-	Emergency Contact Last Name:<input type="text" name="emergencyContactln" class="white-text" value="<%= user.emergencyContactln %>" required><br>
+	<strong>Emergency Contact:</strong>
+	<br> First Name: <input type="text" name="emergencyContactfn" class="white-text" value="<%= user.emergencyContactfn %>" required>
+	Last Name:<input type="text" name="emergencyContactln" class="white-text" value="<%= user.emergencyContactln %>" required><br>
 	<br>
 	<button type="submit" class="btn btn-secondary">Update Profile</button>
 </div>

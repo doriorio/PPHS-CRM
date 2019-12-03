@@ -1,14 +1,33 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title><%= title %></title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PPHS</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/images/pawprint.jpg">
 
-  <link rel='stylesheet' href='/stylesheets/style.css' />
+
 </head>
-
 <body>
+        <nav class="navbar bg-primary sticky-top" id="header">
+
+          <i class="material-icons md-72" style="color:white">
+            pets
+            </i>
+                  <ul class="navbar-nav">
+                    <% if (user) { %>
+                      <a class="hoverlink" href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                      <% } else { %>
+                      <a class="hoverlink" href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                      <% } %>
+                  </ul>
+              </nav>
+<section class="m-5">
+
   <p><%= title %></p>
   <% if (user) { %>
   <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
@@ -16,5 +35,25 @@
   <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
   <% } %>
 </body>
+
+
+
+</section>
+<footer class="bg-info fixed-bottom p-3">
+  <span class="text-light d-flex justify-content-start align-content-middle">
+    <i class="material-icons" style="color:white">
+      local_phone
+    </i>
+      818-340-2275 &ensp;
+
+    <i class="material-icons" style="color:white">
+      my_location
+    </i>
+        20920 Victory Blvd, Woodland Hills
+        <a href="http://pamperedpethotels.com" style="color:white" class="hoverlink right" target="_blank">Visit Our
+          Website</a>
+        </span>
+
+</footer>
 
 </html>
