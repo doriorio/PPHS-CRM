@@ -12,20 +12,6 @@ var dogSchema = new Schema({
     feedingFrequency: Number
 })
 
-
-var reservationSchema = new Schema({
-    type: {
-        type: String,
-        required: true,
-        enum: ['grooming', 'daycare', 'boarding']
-    },
-    checkIn: Date,
-    checkOut: Date,
-    notes: String,
-    dog: String
-})
-
-
 var userSchema = new Schema({
     name: String,
     authorizedppl: String,
@@ -38,7 +24,7 @@ var userSchema = new Schema({
     emergencyContactfn: String,
     emergencyContactln: String,
     dogs: [dogSchema],
-    reservations: [reservationSchema],
+    reservations: [{type: Schema.Types.ObjectId, ref: 'Reservation'}],
     email: String,
     googleId: []
 })

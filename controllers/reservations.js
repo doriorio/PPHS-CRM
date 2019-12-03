@@ -1,12 +1,14 @@
 
 const User = require('../models/user');
+const Reservation = require('../models/reservation');
 
 
 module.exports = {
     new: newReservation,
     create,
     show,
-    edit
+    edit,
+    update
 }
 
 
@@ -20,35 +22,45 @@ function newReservation(req, res){
     });
 } 
 
+
+//change
 function create(req, res){
-    console.log("hitting create reso");
-    console.log(req.body);
-    User.findById(req.params.id, function(err, user){
+    console.log('hitting create route for resos')
+    let user = req.params.id;
+    Reservation.create(req.body, function(err, reso){
+        console.log(reso);
+        res.redirect(`/user/${user}/reservations/show`);
+    });
 
-        user.reservations.push(req.body);
-        user.save(function(err){
-
-            res.redirect(`/user/${req.params.id}/reservations/show`);
-        });
-});
 }
 
 function show(req, res){
-    User.findById(req.params.id, function(err, user){
-        console.log(user.reservations);
-        res.render(`user/reservations/show`, {
-            user,
-            id: req.params.id
+    let user = req.params.id;
+    console.log('hitting show route for resos')
+    Reservation.find({}, function(err,resos){
+        console.log(resos)
+        User.findById(req.params.id, function (err, user){
+            res.render(`user/reservations/show`, {
+                user,
+                resos
+
         });
     });
+    });
 }
-
+//change
 function edit(req, res){
     console.log('hitting edit route');
+    
+    console.log(User.reservations)
+    User.findOne({reservations: req.params.id}, function(err, reso){
+        console.log(reso)
+        res.render(`user/reservations/edit`, {
 
-    res.render(`user/reservations/edit`, {
-        // id: req.params.id,
+        })
+
     });
+
 }
 
 function update(req, res){

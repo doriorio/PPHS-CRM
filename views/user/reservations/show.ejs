@@ -1,9 +1,7 @@
 <%- include('../../partials/head') %>
 
-
-
-
-<% user.reservations.forEach(function(r) { %>
+<%= user %>
+<% resos.forEach(function(r) { %>
     <%= r.id %>
     <div class="card border-primary m-3" style="width: 20rem;">
         <div class="card-header" style="text-transform: capitalize;" ><i class="material-icons md-72" >pets</i> <%= r.type %> Reservation
