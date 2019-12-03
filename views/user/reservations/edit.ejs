@@ -25,7 +25,10 @@ this can be populated with all the stuff from the new reso form
 <br>
     <button type="submit" class="btn btn-secondary">Update Reservation</button>
 </form>
-
+<br>
+<form action="/user/<%= user %>/reservations/<%= reso.id %>/?_method=DELETE" method="POST">
+    <button type="submit" class="btn btn-danger">Delete reservation</button>
+</form>
 
 
 <%- include('../../partials/footer') %>

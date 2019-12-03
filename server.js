@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
 
@@ -39,6 +40,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(methodOverride('_method'));
 
 //mount all routes with appropriate base paths
 app.use('/', indexRouter);

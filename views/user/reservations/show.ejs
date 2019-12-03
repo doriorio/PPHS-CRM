@@ -6,10 +6,12 @@
         <div class="card-header" style="text-transform: capitalize;" ><i class="material-icons md-72" >pets</i> <%= r.type %> Reservation
             <a href="/user/<%= user.id %>/reservations/<%= r.id %>/edit" class="badge badge-secondary" style="float: right;">
                 Update
-            </a></div>
+            </a>
+
+          </div>
         <div class="card-body">
           <h5 class="card-title"> <%= r.dog %></h5>
-          <p class="card-text"><h6>Check In: <%= r.checkIn %> Check Out: <%= r.checkOut %> </h6></p>
+          <p class="card-text"><h6>Check In: <%= r.checkIn %> Check Out: <%= r.checkOut %> <br> <%= r.notes %></h6></p>
         </div>
       </div>
 
