@@ -12,6 +12,7 @@ module.exports = {
     delete: deleteOne
 }
 
+//will need to scrub this for User.findbyId
 
 function newReservation(req, res){
     User.findById(req.params.id, function(err, user){
@@ -82,3 +83,4 @@ function deleteOne(req, res){
     })
 
 }
+

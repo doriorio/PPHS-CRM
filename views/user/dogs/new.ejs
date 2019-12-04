@@ -1,4 +1,6 @@
 <%- include('../../partials/head') %>
+
+
 <script type="text/javascript">
 
 
@@ -20,7 +22,7 @@ function makeDogInputs(){
 
 <form action="/user/<%= id %>/dogs" method="POST">
 	Dog's Name: <input type="text" name="dogName" class="white-text"><br>
-	Breed:<select name="breed" id="breedPicker" multiple>
+	Breed:<select name="breed" id="breedPicker">
 			<script>makeDogInputs();</script>
 		</select>
 <br>

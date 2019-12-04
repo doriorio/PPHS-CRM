@@ -25,7 +25,7 @@ function show(req, res){
     // });
 }
 
-
+//will need to scrub this for User.findbyId
 //i think this create should be more like an update
 function create(req, res){
     User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, user) => 

@@ -24,12 +24,13 @@ router.get('/logout', function(req, res) {
 });
 
 router.get('/user/:id/new', usersCtrl.new);
-router.post('/user/:id', usersCtrl.create);
+router.post('/user/:id', isLoggedIn, usersCtrl.create);
 router.get('/user/:id/show', usersCtrl.show);
-
-
-
 router.get('/user', usersCtrl.index);
 
+function isLoggedIn(req, res, next) {
+  if ( req.isAuthenticated() ) return next();
+  res.redirect('/auth/google');
+}
 
 module.exports = router;

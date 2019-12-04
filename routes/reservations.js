@@ -5,13 +5,16 @@ var resoCtrl = require('../controllers/reservations');
 
 
 router.get('/user/:id/reservations/new', resoCtrl.new);
-router.post('/user/:id/reservations', resoCtrl.create);
+router.post('/user/:id/reservations', isLoggedIn, resoCtrl.create);
 router.get('/user/:id/reservations/show', resoCtrl.show);
 router.get('/user/:uid/reservations/:rid/edit', resoCtrl.edit);
-router.post('/user/:uid/reservations/:rid', resoCtrl.update);
-router.delete('/user/:uid/reservations/:rid', resoCtrl.delete);
+router.post('/user/:uid/reservations/:rid', isLoggedIn, resoCtrl.update);
+router.delete('/user/:uid/reservations/:rid', isLoggedIn, resoCtrl.delete);
 
-
+function isLoggedIn(req, res, next) {
+    if ( req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
+  }
 module.exports = router;
 
 

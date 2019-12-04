@@ -46,3 +46,13 @@ body :hover{
   margin: 0 auto;
 
 }
+
+#circle {
+  height:200px;
+  width:200px;
+  border-radius:50%;
+  background-image: url("/images/snickers.jpg");
+  background-position:center;
+  background-size:cover;
+  border: 5px solid black;
+}
