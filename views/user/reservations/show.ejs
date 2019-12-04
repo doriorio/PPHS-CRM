@@ -1,7 +1,10 @@
 <%- include('../../partials/head') %>
 
+
+
 <% resos.forEach(function(r) { %>
-    <%= r.id %>
+
+    
     <div class="card border-primary m-3" style="width: 20rem;">
         <div class="card-header" style="text-transform: capitalize;" ><i class="material-icons md-72" >pets</i> <%= r.type %> Reservation
             <a href="/user/<%= user.id %>/reservations/<%= r.id %>/edit" class="badge badge-secondary" style="float: right;">
@@ -11,7 +14,16 @@
           </div>
         <div class="card-body">
           <h5 class="card-title"> <%= r.dog %></h5>
-          <p class="card-text"><h6>Check In: <%= r.checkIn %> Check Out: <%= r.checkOut %> <br> <%= r.notes %></h6></p>
+          <p class="card-text"><h6>Check In: <%= moment(r.checkIn).format("MM/D/YY @ h a") %> <br>
+            Check Out: <%= moment(r.checkOut).format("MM/D/YY @ h a") %>
+             <br> 
+             <% if (r.notes !== '') { %>
+             <i class="material-icons">
+                event_note
+                </i>
+                <em><%= r.notes %></em>
+              </h6></p>
+            <% }; %>
         </div>
       </div>
 

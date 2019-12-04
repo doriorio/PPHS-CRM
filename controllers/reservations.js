@@ -1,6 +1,7 @@
 
 const User = require('../models/user');
 const Reservation = require('../models/reservation');
+var moment = require('moment');
 
 
 module.exports = {
@@ -44,7 +45,8 @@ function show(req, res){
         User.findById(req.params.id, function (err, user){
             res.render(`user/reservations/show`, {
                 user,
-                resos
+                resos,
+                moment: moment
 
         });
     });

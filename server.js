@@ -6,11 +6,13 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 var session = require('express-session');
 var passport = require('passport');
+var moment = require('moment');
 
 //load the env vars
 require('dotenv').config();
 
 var app = express();
+var moment = moment();
 
 
 //connect to the MongoDB with mongoose

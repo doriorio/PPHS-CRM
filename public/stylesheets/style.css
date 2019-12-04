@@ -56,9 +56,15 @@ body :hover{
   background-position:center;
   background-size:cover;
   border: 5px solid black;
-
+  opacity: 0.8;
   margin: 0 auto;
 
+}
+
+#circle:hover{
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out 0s;
+  opacity: 1;
 }
 
 .img-center-align {
