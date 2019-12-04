@@ -1,32 +1,27 @@
 <%- include('../../partials/head') %>
 
-
-
 <form action="/user/<%= user._id %>/reservations" method="POST">
     Type:
-    <select name="type">
+    <select name="type" required>
         <option value="grooming">Grooming</option>
         <option value="daycare">Daycare</option>
         <option value="boarding">Boarding</option>
     </select>
     <br>
-    Dog: <select name="dog">
+    Dog: <select name="dog" required>
         <% user.dogs.forEach(function(d) { %>
         <option><%= d.dogName %></option>
         <% }) %>
     </select>
     </p>
     <br>
-    Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01"><br>
-    Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01"><br>
+    Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01" required><br>
+    Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01" required><br>
 
     Notes?: <textarea name="notes" class="white-text" width="50%" rows="10"></textarea>
     <br>
     <button type="submit" class="btn btn-primary">Add reservation</button>
 </form>
-
-
-
 
 
 <%- include('../../partials/footer') %>

@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PPHS</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet">
-    <link href="/stylesheets/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="icon" href="/images/pawprint.jpg">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PPHS</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/minty/bootstrap.min.css" rel="stylesheet">
+  <link href="/stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" href="/images/pawprint.jpg">
 </head>
+
 <body>
-        <nav class="navbar bg-primary sticky-top" id="header">
+  <nav class="navbar bg-primary sticky-top" id="header">
 
-          <i class="material-icons md-72" style="color:white">
-            pets
-            </i>
-                  <ul class="navbar-nav">
-                    <% if (user) { %>
-                      <a class="hoverlink" href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-                      <% } else { %>
-                      <a class="hoverlink" href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-                      <% } %>
-                  </ul>
-              </nav>
-<section class="m-5">
+    <i class="material-icons md-72" style="color:white">
+      pets
+    </i>
+    <ul class="navbar-nav">
+      <% if (user) { %>
+      <a class="hoverlink" href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+      <% } else { %>
+      <a class="hoverlink" href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+      <% } %>
+    </ul>
+  </nav>
+  <section class="m-5">
 
- <img src="images/Pampered-Pet-Spa-Black.png" width="80%" class="img-center-align">
- <br>
- <a href="/auth/google"><div id="circle"></div></a>
-  <br>
+    <img src="images/Pampered-Pet-Spa-Black.png" width="80%" class="img-center-align">
+    <br>
+    <a href="/auth/google">
+      <div id="circle"></div>
+    </a>
+    <br>
 
-  <% if (user) { %>
-  <a href="/logout" class="btn btn-primary btn-lg btn-block" role="button"><i class="material-icons left">trending_flat</i>Log Out</a>
-  <% } else { %>
-  <a href="/auth/google" class="btn btn-primary btn-lg btn-block" role="button"><i class="material-icons left">vpn_key</i>Login with Google</a>
-  <% } %>
+    <% if (user) { %>
+    <a href="/logout" class="btn btn-primary btn-lg btn-block" role="button"><i
+        class="material-icons left">trending_flat</i>Log Out</a>
+    <% } else { %>
+    <a href="/auth/google" class="btn btn-primary btn-lg btn-block" role="button"><i
+        class="material-icons left">vpn_key</i>Login with Google</a>
+    <% } %>
 </body>
 
 
@@ -48,15 +52,15 @@
     <i class="material-icons" style="color:white">
       local_phone
     </i>
-      818-340-2275 &ensp;
+    818-340-2275 &ensp;
 
     <i class="material-icons" style="color:white">
       my_location
     </i>
-        20920 Victory Blvd, Woodland Hills
-        <a href="http://pamperedpethotels.com" style="color:white" class="hoverlink right" target="_blank">Visit Our
-          Website</a>
-        </span>
+    20920 Victory Blvd, Woodland Hills
+    <a href="http://pamperedpethotels.com" style="color:white" class="hoverlink right" target="_blank">Visit Our
+      Website</a>
+  </span>
 
 </footer>
 

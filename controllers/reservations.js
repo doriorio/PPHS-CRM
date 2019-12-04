@@ -56,10 +56,13 @@ function show(req, res){
 function edit(req, res) {
     let reso = req.params.id;
     let user = req.params.uid;
+    let userObj = req.user;
+    console.log(userObj);
     Reservation.findOne({reso}, function (err, reso) {
         res.render(`user/reservations/edit`, {
             reso,
-            user
+            user,
+            userObj
         });
     })
 

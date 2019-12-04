@@ -21,15 +21,15 @@ function makeDogInputs(){
 
 
 <form action="/user/<%= id %>/dogs" method="POST">
-	Dog's Name: <input type="text" name="dogName" class="white-text"><br>
-	Breed:<select name="breed" id="breedPicker">
+	Dog's Name: <input type="text" name="dogName" class="white-text" required><br>
+	Breed:<select name="breed" id="breedPicker" required>
 			<script>makeDogInputs();</script>
 		</select>
 <br>
-	Age: <input type="number" name="age" class="white-text"><br>
-	Vaccination Dates: <input type="date" name="vaccinationDates" class="white-text"><br>
-    Food Brand: <input type="text" name="foodBrand" class="white-text"><br>
-    Feeding frequency (assume 12 hours): <input type="number" name="feedingFrequency" class="white-text"><br>
+	Age: <input type="number" name="age" class="white-text" required><br>
+	Vaccination Dates: <input type="date" name="vaccinationDates" class="white-text" required><br>
+    Food Brand: <input type="text" name="foodBrand" class="white-text" required><br>
+    Feeding frequency (assume 12 hours): <input type="number" name="feedingFrequency" class="white-text" required><br>
 
 	Notes?: <textarea name="notes" class="white-text" width="50%" rows="10"></textarea>
     <br>
