@@ -20,7 +20,7 @@ this can be populated with all the stuff from the new reso form
     Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkIn %>"><br>
     Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkOut %>"><br>
 
-    Notes?: <input type="text" name="notes" class="white-text" value="<%= reso.notes %>"><br>
+    Notes?: <textarea name="notes" class="white-text" value="<%= reso.notes %>" width="50%" rows="10"></textarea><br>
 
 <br>
     <button type="submit" class="btn btn-secondary">Update Reservation</button>

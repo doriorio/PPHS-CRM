@@ -14,7 +14,6 @@ module.exports = {
 
 
 function newReservation(req, res){
-
     User.findById(req.params.id, function(err, user){
         res.render('user/reservations/new', {
             user,
@@ -52,7 +51,6 @@ function show(req, res){
 }
 //change
 function edit(req, res) {
-
     let reso = req.params.id;
     let user = req.params.uid;
     Reservation.findOne({reso}, function (err, reso) {

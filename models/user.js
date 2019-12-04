@@ -4,7 +4,10 @@ var Schema = mongoose.Schema;
 
 var dogSchema = new Schema({
     dogName: String,
-    breed: String,
+    breed: {
+        required: true,
+        type: String
+    },
     age: Number,
     vaccinationDates: Date,
     notes: String,

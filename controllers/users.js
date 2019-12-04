@@ -10,19 +10,19 @@ module.exports = {
 //new user FORM
 function newUser(req, res){
     console.log("hitting new");
-    User.findById(req.params.id, function(err, user){
+    // User.findById(req.params.id, function(err, user){
         res.render('user/new', {
-            user,
+            user: req.user,
             id: req.params.id
-        });
+        // });
     });
 }
 //show the form?? 
 function show(req, res){
     console.log('hitting show');
-    User.findById(req.params.id, function(err, user){
-        res.render('user/show', {user});
-    });
+    // User.findById(req.params.id, function(err, user){
+        res.render('user/show', {user: req.user});
+    // });
 }
 
 
@@ -39,10 +39,12 @@ function create(req, res){
 
 
 function index(req, res, next){
-    User.findById(req.user.id, function(err, user){
+    // User.findById(req.user.id, function(err, user){
+        console.log('index route')
         res.render('user/index', {
-            user,
+            user: req.user,
+            
         });
 
-});
+// });
 }
