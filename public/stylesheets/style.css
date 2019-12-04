@@ -55,4 +55,13 @@ body :hover{
   background-position:center;
   background-size:cover;
   border: 5px solid black;
+
+  margin: 0 auto;
+
+}
+
+.img-center-align {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
