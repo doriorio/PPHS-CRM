@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Capriola', sans-serif;
   
 }
 
@@ -65,3 +66,4 @@ body :hover{
   margin-left: auto;
   margin-right: auto;
 }
+

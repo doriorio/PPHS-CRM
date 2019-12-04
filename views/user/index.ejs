@@ -1,15 +1,29 @@
 <%- include('../partials/head') %>
 <div class="list-group">
-<br>
-<ul>
-	<h5>Quick Links:</h5><br><strong>
-		<a href="/user/<%= user._id %>/new" class="list-group-item list-group-item-action list-group-item-primary" height="100px"><i class="material-icons">face</i>Update profile</a>
-		<a href="user/<%= user._id %>/show" class="list-group-item list-group-item-action list-group-item-primary">See profile & pets</a>
-		<a href="user/<%= user._id %>/reservations/show" class="list-group-item list-group-item-action list-group-item-primary">See reservations</a>
-		<a href="user/<%= user._id %>/reservations/new" class="list-group-item list-group-item-action list-group-item-primary">Make a reservation</a>
-		<a href="/user/<%= user._id %>/dogs/new" class="list-group-item list-group-item-action list-group-item-primary">Add a dog</a>
-	</strong>
-</ul>
+	<br>
+	<ul>
+		<strong>
+			<a href="/user/<%= user._id %>/new" class="list-group-item list-group-item-primary m-3 p-3"
+				height="100px"><i class="material-icons">face</i>&ensp;Update profile</a>
+			<a href="user/<%= user._id %>/show" class="list-group-item list-group-item-primary m-3 p-3">
+				<i class="material-icons">
+						info
+						</i>
+						&ensp;See pets & profile info</a>
+			<a href="user/<%= user._id %>/reservations/show" class="list-group-item list-group-item-primary m-3 p-3">
+				<i class="material-icons">
+						event
+						</i>
+					&ensp;See reservations</a>
+			<a href="user/<%= user._id %>/reservations/new" class="list-group-item list-group-item-primary m-3 p-3">
+				<i class="material-icons">
+						calendar_today
+						</i>
+						&ensp;Make a reservation</a>
+			<a href="/user/<%= user._id %>/dogs/new" class="list-group-item list-group-item-primary m-3 p-3"><i
+					class="material-icons md-72">pets</i>&ensp;Add a dog</a>
+		</strong>
+	</ul>
 </div>
 </body>
 
