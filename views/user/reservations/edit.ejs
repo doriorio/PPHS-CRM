@@ -9,13 +9,14 @@
         <option value="boarding">Boarding</option>
     </select>
     <br>
-    Dog: <select name="dog" required>
+    Dog: <em>Your reservation is for <%= reso.dog %> - if you want to change this, select below</em><br>
+    <select name="dog" required>
             <% userObj.dogs.forEach(function(d) { %>
             <option><%= d.dogName %></option>
             <% }) %>
         </select>
     </p>
-    <br>
+
     Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkIn %>"><br>
     Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01" value="<%= reso.checkOut %>"><br>
 
