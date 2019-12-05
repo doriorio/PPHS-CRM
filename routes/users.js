@@ -23,14 +23,14 @@ router.get('/logout', function(req, res) {
   res.redirect('/home');
 });
 
-router.get('/user/:id/new', usersCtrl.new);
+router.get('/user/:id/new', isLoggedIn, usersCtrl.new);
 router.post('/user/:id', isLoggedIn, usersCtrl.create);
-router.get('/user/:id/show', usersCtrl.show);
-router.get('/user', usersCtrl.index);
+router.get('/user/:id/show',isLoggedIn, usersCtrl.show);
+router.get('/user', isLoggedIn, usersCtrl.index);
 
 function isLoggedIn(req, res, next) {
   if ( req.isAuthenticated() ) return next();
-  res.redirect('/auth/google');
+  res.redirect('/home');
 }
 
 module.exports = router;

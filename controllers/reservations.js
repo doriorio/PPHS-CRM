@@ -39,12 +39,10 @@ function create(req, res){
 }
 //this works!
 function show(req, res){
-    console.log(req.user,"this is the req.user <<<<<<<<<<<<<<<<<<<<<<<<<<<")
+
     let user = req.params.id;
-    Reservation.find({}, function(err,resos){
-        // console.log(resos);
-        User.findById(req.params.id, function (err, user){
-            console.log(user)
+    User.findById(req.params.id, function (err, user){
+        Reservation.find({user: req.params.id}, function(err,resos){
             res.render(`user/reservations/show`, {
                 user,
                 resos: resos,
@@ -59,7 +57,7 @@ function edit(req, res) {
     const rId = req.params.rid;
     let user = req.params.uid;
     let userObj = req.user;
-    console.log('aejbnrgkjaebrgjaebrgjkaebrgaebgiuabergiueariughaeiughaeiughaeiug');
+
     console.log(rId);
     Reservation.findById(rId, function (err, reso) {
         console.log(reso)

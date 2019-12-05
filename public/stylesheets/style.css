@@ -25,6 +25,10 @@ body :hover{
   height: 10vh;
 }
 
+
+.footer {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   #header {
     background-image: url("/images/header.png");
@@ -32,6 +36,15 @@ body :hover{
     background-size:cover;
     background-repeat: repeat-y;
     opacity: 0.8;
+  }
+  .footer {
+    display: block;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 0;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
   }
 
 }
@@ -135,18 +148,3 @@ body :hover{
 
 }
 
-.footer {
-  display: none;
-}
-
-@media (min-width: 992px) {
-  .footer {
-    display: block;
-    color: #fff;
-    padding: 20px 0;
-    margin-bottom: 0;
-    text-align: center;
-    overflow: hidden;
-    width: 100%;
-  }
-}
