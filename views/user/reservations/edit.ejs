@@ -1,7 +1,7 @@
 <%- include('../../partials/head') %>
 
 
-<form action="/user/<%= user %>/reservations/<%= reso.id %>" method="POST">
+<form action="/user/<%= user %>/reservations/<%= reso.id %>?_method=PUT" method="POST">
 
     <div class="form-row">
         <div class="form-group col-md-6">
