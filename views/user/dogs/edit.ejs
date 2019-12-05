@@ -1,0 +1,25 @@
+<%- include('../../partials/head') %>
+
+
+<form action="/user/<%= user._id %>/dogs?_method=PUT" method="POST">
+	
+	<div class="form-row">
+		<div class="form-group col-md-3">
+			<label for="age">Age: </label>
+			<input type="number" name="age" class="white-text form-control" required>
+		</div>
+		<div class="form-group col-md-9">
+			<label for="vaccinationDates">Date of last vaccination*: </label>
+			<input type="date" name="vaccinationDates" class="white-text form-control" required>
+		</div>
+	</div>
+	
+
+	<button type="submit" class="btn btn-secondary btn-lg btn-block">Update</button>
+</form><br>
+* Your dog must be current (within one year) on all vaccines - specifically Distemper, Rabies & Bordetella vaccines. If you need to update the vaccinations
+please keep in mind Rabies and Distemper must be administered at least 24 hours prior to visiting the facility. The
+Bordatella vaccination has a 10 day hold via injection and 3 day hold when administered oral/nasal. We will not be able
+to board your dog if they are recently vaccinated.
+<%- include('../../partials/footer') %>
+

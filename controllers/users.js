@@ -1,4 +1,5 @@
 const User = require('../models/user');
+var moment = require('moment');
 module.exports = {
     new: newUser,
     create,
@@ -14,14 +15,16 @@ function newUser(req, res){
 
     });
 }
-//show the form?? 
+
 function show(req, res){
-        res.render('user/show', {user: req.user});
+        res.render('user/show', {
+            user: req.user,
+            moment: moment
+        });
 
 }
 
 function create(req, res){
-
 
     User.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, user) => 
     {

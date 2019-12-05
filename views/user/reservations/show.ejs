@@ -1,5 +1,6 @@
 <%- include('../../partials/head') %>
 
+<% var resos = resos.sort((a, b) => a.checkIn - b.checkIn) %>
 
 
 <% resos.forEach(function(r) { %>
@@ -14,7 +15,8 @@
           </div>
         <div class="card-body">
           <h5 class="card-title"> <%= r.dog %></h5>
-          <p class="card-text"><h6>Check In: <%= moment(r.checkIn).format("MM/D/YY @ h a") %> <br>
+       
+          <p class="card-text"><h6 class="checkIn">Check In: <%= moment(r.checkIn).format("MM/D/YY @ h a") %> </h6><br>
             Check Out: <%= moment(r.checkOut).format("MM/D/YY @ h a") %>
              <br> 
              <% if (r.notes !== '') { %>
@@ -22,7 +24,7 @@
                 event_note
                 </i>
                 <em><%= r.notes %></em>
-              </h6></p>
+              </p>
             <% }; %>
         </div>
       </div>

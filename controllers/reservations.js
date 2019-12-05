@@ -13,15 +13,15 @@ module.exports = {
     delete: deleteOne
 }
 
-//will need to scrub this for User.findbyId
+
 
 function newReservation(req, res){
-    // User.findById(req.params.id, function(err, user){
+
         res.render('user/reservations/new', {
             user: req.user,
             id: req.params.id
         });
-    // });
+
 } 
 
 
@@ -40,7 +40,7 @@ function create(req, res){
     });
 
 }
-//this works!
+
 function show(req, res){
 
     let user = req.params.id;
@@ -55,7 +55,7 @@ function show(req, res){
     });
     });
 }
-//change
+
 function edit(req, res) {
     const rId = req.params.rid;
     let user = req.params.uid;

@@ -2,7 +2,7 @@
 
 <section id="user-data">
 
-    <div class="card text-white bg-primary m-3" style="width: 30rem">
+    <div class="card text-white bg-primary m-3" style="width: 25rem">
         <div class="card-header">
             <h4><%= user.name %><a href="/user/<%= user._id %>/new" class="badge badge-secondary" style="float: right;">
                     Update</a></h4>
@@ -18,7 +18,7 @@
 
 
 
-    <div class="card text-white bg-info m-3" style="width: 30rem">
+    <div class="card text-white bg-info m-3" style="width: 25rem">
         <div class="card-header"><i class="material-icons">
                 person_pin
             </i>
@@ -29,16 +29,20 @@
         </div>
     </div>
     </div>
-    <p>
-    </p>
-    <% user.dogs.forEach(function(d) { %>
 
-    <div class="card border-primary m-3" style="width: 50vh">
+    <% user.dogs.forEach(function(d) { %>
+        
+
+    <div class="card border-primary m-3" style="width: 25rem">
         <div class="card-header">
-            <h5><i class="material-icons md-72">pets</i> <%= d.dogName %></h5>
+            <h5><i class="material-icons md-72">pets</i> <%= d.dogName %>
+            <a href="/user/<%= user._id %>/dogs/<%= d.id %>/edit" class="badge badge-secondary" style="float: right;">
+                Update shots</a></h5>
+          </h4>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Breed: <%= d.breed %></h5>
+            <h5 class="card-title">Last vaccinated: <%= moment(d.vaccinationDates).format("MM/D/YY") %><br>
+                Breed: <%= d.breed %></h5>
             <h6>
                 <p class="card-text"><%= d.notes %></p>
             </h6>
