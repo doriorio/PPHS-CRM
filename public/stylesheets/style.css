@@ -22,7 +22,7 @@ body :hover{
 }
 
 #header {
-  height: 10vh;
+  height: 15vh;
 }
 
 
@@ -50,6 +50,7 @@ body :hover{
 }
 
 .speech-bubble {
+
   position: relative;
   color: white;
   background: black;
