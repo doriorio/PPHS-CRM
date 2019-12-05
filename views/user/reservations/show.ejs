@@ -1,5 +1,5 @@
 <%- include('../../partials/head') %>
-
+<section id="user-data">
 <% var resos = resos.sort((a, b) => a.checkIn - b.checkIn) %>
 
 
@@ -15,8 +15,8 @@
           </div>
         <div class="card-body">
           <h5 class="card-title"> <%= r.dog %></h5>
-       
-          <p class="card-text"><h6 class="checkIn">Check In: <%= moment(r.checkIn).format("MM/D/YY @ h a") %> </h6><br>
+
+          <p class="card-text">Check In: <%= moment(r.checkIn).format("MM/D/YY @ h a") %><br>
             Check Out: <%= moment(r.checkOut).format("MM/D/YY @ h a") %>
              <br> 
              <% if (r.notes !== '') { %>
@@ -30,7 +30,7 @@
       </div>
 
 <% }); %>
-
+</section>
 <a href="../show">Back to my profile</a><br>
 
 

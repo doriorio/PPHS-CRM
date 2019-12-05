@@ -22,7 +22,7 @@ body :hover{
 }
 
 #header {
-  height: 15vh;
+  height: 13vh;
 }
 
 
@@ -35,6 +35,7 @@ body :hover{
     background-position:center;
     background-size:cover;
     background-repeat: repeat-y;
+    background-repeat: repeat-x;
     opacity: 0.8;
   }
   .footer {
@@ -59,8 +60,10 @@ body :hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   width: 30%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 auto;
 
 }
 
@@ -77,6 +80,7 @@ body :hover{
   border-bottom: 0;
   margin-top: -12px;
   margin-right: -24px;
+
 }
 
 
@@ -146,6 +150,9 @@ body :hover{
   display: flex;
 
   flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 
 }
 

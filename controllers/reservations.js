@@ -19,7 +19,8 @@ function newReservation(req, res){
 
         res.render('user/reservations/new', {
             user: req.user,
-            id: req.params.id
+            id: req.params.id,
+            moment: moment
         });
 
 } 
