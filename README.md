@@ -7,7 +7,12 @@ A customer relationship management for a doggy daycare, offering dog grooming, d
 
 ##Screenshots: 
 
+Desktop login:
+![Desktop login](https://github.com/doriorio/PPHS-CRM/blob/master/README%20Images/Screen%20Shot%202019-12-05%20at%209.01.01%20AM.png?raw=true)
 
+
+Mobile login:
+![Mobile login](https://github.com/doriorio/PPHS-CRM/blob/master/README%20Images/Screen%20Shot%202019-12-05%20at%209.01.09%20AM.png?raw=true)
 
 
 ##Trello planning board: 
