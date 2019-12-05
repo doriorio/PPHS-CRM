@@ -8,7 +8,9 @@
                     Update</a></h4>
         </div>
         <div class="card-body">
-            <h5 class="card-title">Phone: <%= user.phone %> </h5>
+            <h5 class="card-title"><i class="material-icons">
+                    phone
+                    </i> <%= user.phone %> </h5>
             <p class="card-text">
                 <h6>Address: <%= user.streetAdd %> <%= user.street %> / <%= user.city %> <%= user.zip %></h6>
             </p>
@@ -25,7 +27,10 @@
 
             Vet info</div>
         <div class="card-body">
-            <h4 class="card-title"><%= user.vetName %></h4>
+            <h4 class="card-title"><%= user.vetName %><br></h4>
+               <h6><i class="material-icons">
+                    phone
+                    </i> <%= user.vetPhone %></h6>
         </div>
     </div>
     </div>

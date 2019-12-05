@@ -24,6 +24,7 @@ var userSchema = new Schema({
     city: String,
     zip: Number,
     vetName: String,
+    vetPhone: Number,
     emergencyContactfn: String,
     emergencyContactln: String,
     dogs: [dogSchema],
