@@ -27,12 +27,15 @@ function newReservation(req, res){
 
 //this works!
 function create(req, res){
+    console.log('hitting create')
     let user = req.user._id;
+    console.log(user);
     Reservation.create(req.body, function(err, reso){
         reso.user = user;
-        // reso.save(function(err){
+        console.log(reso);
+        reso.save(function(err){
             res.redirect(`/user/${user}/reservations/show`);
-        // })
+        })
 
     });
 
