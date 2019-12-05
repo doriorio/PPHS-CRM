@@ -142,10 +142,9 @@ body :hover{
 @media (min-width: 992px) {
   .footer {
     display: block;
-    background-color: #F6861F;
     color: #fff;
     padding: 20px 0;
-    margin-bottom: 0
+    margin-bottom: 0;
     text-align: center;
     overflow: hidden;
     width: 100%;
