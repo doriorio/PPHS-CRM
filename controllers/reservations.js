@@ -16,24 +16,23 @@ module.exports = {
 //will need to scrub this for User.findbyId
 
 function newReservation(req, res){
-    User.findById(req.params.id, function(err, user){
+    // User.findById(req.params.id, function(err, user){
         res.render('user/reservations/new', {
-            user,
+            user: req.user,
             id: req.params.id
         });
-    });
+    // });
 } 
 
 
 //this works!
 function create(req, res){
-
-    let user = req.params.id;
+    let user = req.user._id;
     Reservation.create(req.body, function(err, reso){
-        reso.user = req.params.id;
-        reso.save(function(err){
+        reso.user = user;
+        // reso.save(function(err){
             res.redirect(`/user/${user}/reservations/show`);
-        })
+        // })
 
     });
 
@@ -43,10 +42,12 @@ function show(req, res){
     console.log(req.user,"this is the req.user <<<<<<<<<<<<<<<<<<<<<<<<<<<")
     let user = req.params.id;
     Reservation.find({}, function(err,resos){
+        // console.log(resos);
         User.findById(req.params.id, function (err, user){
+            console.log(user)
             res.render(`user/reservations/show`, {
                 user,
-                resos,
+                resos: resos,
                 moment: moment
 
         });
@@ -55,11 +56,13 @@ function show(req, res){
 }
 //change
 function edit(req, res) {
-    let reso = req.params.id;
+    const rId = req.params.rid;
     let user = req.params.uid;
     let userObj = req.user;
-    console.log(userObj);
-    Reservation.findOne({reso}, function (err, reso) {
+    console.log('aejbnrgkjaebrgjaebrgjkaebrgaebgiuabergiueariughaeiughaeiughaeiug');
+    console.log(rId);
+    Reservation.findById(rId, function (err, reso) {
+        console.log(reso)
         res.render(`user/reservations/edit`, {
             reso,
             user,

@@ -1,6 +1,6 @@
 <%- include('../partials/head') %>
 
-<form action="/user/<%= id %>" method="POST">
+<form action="/user/<%= user._id %>" method="POST">
 	<div class="form-row">
 		<div class="form-group col-md-6">
 			<label for="name">Full Name:</label>
@@ -28,7 +28,7 @@
 			<input type="number" name="streetAdd" class="white-text form-control" value="<%= user.streetAdd%>">
 		</div>
 		<div class="form-group col-sm-9">
-			<label for="street">Street</label>
+			<label for="street">Street + Unit (if applicable)</label>
 			<input type="text" name="street" class="white-text form-control" value="<%= user.street%>">
 		</div>
 	</div>
