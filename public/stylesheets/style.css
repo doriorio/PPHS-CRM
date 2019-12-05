@@ -4,6 +4,9 @@
   
 }
 
+.form-group {
+  font-family: sans-serif;;
+}
 
 :root {
   --mainColor: #E79A9C;
@@ -125,3 +128,9 @@ body :hover{
   margin-right: auto;
 }
 
+#user-data {
+  display: flex;
+
+  flex-wrap: wrap;
+
+}

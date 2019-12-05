@@ -1,23 +1,69 @@
 <%- include('../partials/head') %>
 
-<br>
 <form action="/user/<%= id %>" method="POST">
-	<div class="form-group">
-	Full Name: <input type="text" name="name" class="white-text" value="<%= user.name %>" required><br>
-	Email:<input type="email" name="email" class="white-text" value="<%= user.email %>" required><br>
-	Authorized Persons:<input type="text" name="authorizedppl" class="white-text" value="<%= user.authorizedppl %>"><br>
-	Phone Number: <input type="number" name="phone" class="white-text" value="<%= user.phone %>" required><br>
-	Street Address: <input type="number" name="streetAdd" class="white-text" value="<%= user.streetAdd%>">
-	Street Name: <input type="text" name="street" class="white-text" value="<%= user.street%>"><br>
-	City: <input type="text" name="city" class="white-text" value="<%= user.city%>"><br>
-	Zip: <input type="number" name="zip" class="white-text" value="<%= user.zip%>"><br>
-	Vet Name: <input type="text" name="vetName" class="white-text" value="<%= user.vetName %>" required><br>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="name">Full Name:</label>
+			<input type="text" name="name" class="white-text form-control" value="<%= user.name %>" required>
+		</div>
+		<div class="form-group col-md-6">
+			<label for="email">Email:</label>
+			<input type="email" name="email" class="white-text form-control" value="<%= user.email %>" required>
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="phone">Phone Number:</label>
+		<input type="number" name="phone" class="white-text form-control" value="<%= user.phone %>" required><br>
+	</div>
+
+	<div class="form-row">
+
+		<label for="authorizedppl">Authorized Persons:</label>
+		<input type="text" name="authorizedppl" class="white-text form-control" value="<%= user.authorizedppl %>">
+	</div>
+	<div class="form-row">
+
+		<div class="form-group col-sm-3">
+			<label for="streetAdd">Street Address: </label>
+			<input type="number" name="streetAdd" class="white-text form-control" value="<%= user.streetAdd%>">
+		</div>
+		<div class="form-group col-sm-9">
+			<label for="street">Street</label>
+			<input type="text" name="street" class="white-text form-control" value="<%= user.street%>">
+		</div>
+	</div>
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label for="city">City</label>
+			<input type="text" name="city" class="white-text form-control" value="<%= user.city%>">
+		</div>
+		<div class="form-group col-md-6">
+			<label for="zip">Zip code</label>
+			<input type="number" name="zip" class="white-text form-control" value="<%= user.zip%>">
+		</div>
+	</div>
+	<div class="form-row">
+		<label for="vetName">Vet Name:</label>
+		<input type="text" name="vetName" class="white-text form-control" value="<%= user.vetName %>" required>
+	</div><br>
 	<strong>Emergency Contact:</strong>
-	<br> First Name: <input type="text" name="emergencyContactfn" class="white-text" value="<%= user.emergencyContactfn %>" required>
-	Last Name:<input type="text" name="emergencyContactln" class="white-text" value="<%= user.emergencyContactln %>" required><br>
+
+	<div class="form-row">
+
+		<div class="form-group col-md-6">
+			<label for="emergencyContactfn">First Name: </label>
+			<input type="text" name="emergencyContactfn" class="white-text form-control"
+				value="<%= user.emergencyContactfn %>" required>
+		</div>
+		<div class="form-group col-md-6">
+			<label for="emergencyContactln">Last Name: </label>
+			<input type="text" name="emergencyContactln" class="white-text form-control"
+				value="<%= user.emergencyContactln %>" required>
+		</div>
+	</div>
 	<br>
 	<button type="submit" class="btn btn-secondary">Update Profile</button>
-</div>
-  </form>
 
-  <%- include('../partials/footer') %>
+</form>
+
+<%- include('../partials/footer') %>

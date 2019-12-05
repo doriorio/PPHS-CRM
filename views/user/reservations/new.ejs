@@ -1,29 +1,46 @@
 <%- include('../../partials/head') %>
 
 <form action="/user/<%= user._id %>/reservations" method="POST">
-    Type:
-    <select name="type" required>
-        <option value="grooming">Grooming</option>
-        <option value="daycare">Daycare</option>
-        <option value="boarding">Boarding</option>
-    </select>
-    <br>
-    Dog: <select name="dog" required>
-        <% user.dogs.forEach(function(d) { %>
-        <option><%= d.dogName %></option>
-        <% }) %>
-    </select>
-    </p>
-    <br>
-    Check in date: <input type="date" name="checkIn" class="white-text" min="2019-12-01" max="2020-12-01" required><br>
-    Check out date: <input type="date" name="checkOut" class="white-text" min="2019-12-01" max="2020-12-01" required><br>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+                <label for="type">Type:</label>
+            <select name="type" class="form-control" required>
+                <option value="grooming">Grooming</option>
+                <option value="daycare">Daycare</option>
+                <option value="boarding">Boarding</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+                <label for="dog">Dog:</label>
+             <select name="dog" class="form-control" required>
+                <% user.dogs.forEach(function(d) { %>
+                <option><%= d.dogName %></option>
+                <% }) %>
+            </select>
+        </div>
+    </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                    <label for="checkIn">Check-in:</label>
+                     <input type="date" name="checkIn" class="white-text form-control" min="2019-12-01" max="2020-12-01"
+                    required>
+            </div>
+            <div class="form-group col-md-6">
+                    <label for="checkOut">Check-out:</label>
+                    <input type="date" name="checkOut" class="white-text form-control" min="2019-12-01" max="2020-12-01"
+                    required>
+            </div>
+        </div>
 
-    Notes?: <textarea name="notes" class="white-text" width="50%" rows="10"></textarea>
-    <br>
-    <button type="submit" class="btn btn-primary">Add reservation</button>
+        <div class="form-row">
+                <div class="form-group col">
+                        <label for="notes">Any notes?:</label>
+                        <textarea name="notes" class="white-text form-control"></textarea>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Add reservation</button>
 </form>
 
 
 <%- include('../../partials/footer') %>
-
-

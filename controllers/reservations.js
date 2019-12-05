@@ -40,6 +40,7 @@ function create(req, res){
 }
 //this works!
 function show(req, res){
+    console.log(req.user,"this is the req.user <<<<<<<<<<<<<<<<<<<<<<<<<<<")
     let user = req.params.id;
     Reservation.find({}, function(err,resos){
         User.findById(req.params.id, function (err, user){
