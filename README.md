@@ -5,9 +5,10 @@ A customer relationship management for a doggy daycare, offering dog grooming, d
 MongoDB, Express, Node (date formatting help from moment.js)
 
 ## Ice Box
--Deal with date validation in forms - add requirements
--Add file upload for dog images and vaccination PDFs
--Add RescueGroups API
+* Add Admin route for management
+* Deal with date validation in forms - add requirements
+* Add file upload for dog images and vaccination PDFs
+* Add RescueGroups API
 
 ## Screenshots: 
 
