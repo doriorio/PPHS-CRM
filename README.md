@@ -1,7 +1,13 @@
 # PPHS-CRM
 ## Description:
 A customer relationship management for a doggy daycare, offering dog grooming, doggy daycare, or extended "hotel" stays. For every user, there are multiple pets - for each pet there can be multiple services booked
+## Technologies used:
+MongoDB, Express, Node (date formatting help from moment.js)
 
+## Ice Box
+-Deal with date validation in forms - add requirements
+-Add file upload for dog images and vaccination PDFs
+-Add RescueGroups API
 
 ## Screenshots: 
 
@@ -21,10 +27,3 @@ Logged in reservation page:
 Logged in profile page:
 ![Profile data](https://github.com/doriorio/PPHS-CRM/blob/master/README%20Images/Screen%20Shot%202019-12-05%20at%203.00.11%20PM.png?raw=true)
 
-## Technologies used:
-MongoDB, Express, Node (date formatting help from moment.js)
-
-## Ice Box
--Deal with date validation in forms - add requirements
--Add file upload for dog images and vaccination PDFs
--Add RescueGroups API
