@@ -4,10 +4,7 @@ var Schema = mongoose.Schema;
 
 var dogSchema = new Schema({
     dogName: String,
-    breed: {
-        required: true,
-        type: String
-    },
+    breed: String,
     age: Number,
     vaccinationDates: Date,
     notes: String,
@@ -34,5 +31,4 @@ var userSchema = new Schema({
 })
 
 module.exports = mongoose.model('User', userSchema);
-module.exports = mongoose.model('Dog', dogSchema);
 
